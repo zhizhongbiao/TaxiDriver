@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flLoading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+
+<!--    this imageview needs a laoding animation backgroud -->
+    <ImageView
+        android:id="@+id/ivLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="55px"
+         />
+
+    <TextView
+        android:id="@+id/tvLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="175px"
+        android:text="loading data..."
+        android:textColor="#00FF00"
+        android:textSize="26sp" />
+
+
+</FrameLayout>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'//butterknife
+apply plugin: 'io.objectbox'//ObjectBox
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    //use JDK 1.8  for butterknife required
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    //ObjectBox
+    debugImplementation "io.objectbox:objectbox-android-objectbrowser:2.2.0"
+    releaseImplementation  "io.objectbox:objectbox-android:2.2.0"
+    //    annotationProcessor "io.objectbox:objectbox-processor:$objectboxVersion"
+
+    //BaseRecyclerViewAdapterHelper
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.25'
+
+    // Leakcanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    // Optional, if you use support library fragments:
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+
+    //Google Xing
+    implementation 'com.google.zxing:core:3.2.1'
+
+    //Fragment UI
+    implementation 'me.yokeyword:fragmentation:0.9.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+
+    //Permissionsdispatcher
+    implementation "org.permissionsdispatcher:permissionsdispatcher:4.6.0"
+    annotationProcessor "org.permissionsdispatcher:permissionsdispatcher-processor:4.6.0"
+
+    //Gson
+//    implementation 'com.google.code.gson:gson:2.8.5'
+
+    //Retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+
+    //RxJava2
+    implementation "io.reactivex.rxjava2:rxjava:2.2.14"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+//    implementation 'io.reactivex:rxandroid:1.2.1'
+
+
+}

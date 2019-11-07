@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NestedRefreshLayout">
+        <attr name="pullView" format="integer" />
+        <attr name="pullViewHeight" format="dimension|reference" />
+        <attr name="pullMinViewHeight" format="dimension|reference" />
+        <attr name="pullMaxHeight" format="dimension|reference" />
+        <attr name="refreshHeight" format="dimension|reference" />
+        <attr name="animPlayDuration" format="integer" />
+    </declare-styleable>
+
+    <!--smartShow CustomerViewId-->
+    <item name="custom_toast_msg" type="id"/>
+
+    <declare-styleable name="JPTabBar">
+        <attr name="TabNormalColor" format="reference|color" />
+        <attr name="TabSelectColor" format="reference|color" />
+        <attr name="TabSelectBg" format="reference|color" />
+        <attr name="TabTextSize" format="dimension|reference" />
+        <attr name="TabIconSize" format="dimension|reference" />
+        <attr name="TabIconFilter" format="boolean" />
+        <attr name="TabMargin" format="dimension|reference" />
+        <attr name="TabAnimate" format="enum">
+            <enum name="Flip" value="1" />
+            <enum name="Rotate" value="2" />
+            <enum name="Scale" value="3" />
+            <enum name="Jump" value="4" />
+            <enum name="None" value="5" />
+        </attr>
+        <attr name="TabMiddleBottomDis" format="dimension|reference" />
+        <attr name="TabMiddleView" format="reference" />
+        <attr name="TabMiddleHMargin" format="dimension|reference" />
+        <attr name="BadgeColor" format="reference|color" />
+        <attr name="BadgePadding" format="dimension|reference" />
+        <attr name="BadgeTextSize" format="reference|dimension" />
+        <attr name="BadgeVerticalMargin" format="reference|dimension" />
+        <attr name="BadgeHorizonalMargin" format="reference|dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PasswordInputView">
+        <attr name="pivBorderColor" format="color" />
+        <attr name="pivBorderWidth" format="dimension" />
+        <attr name="pivBorderRadius" format="dimension" />
+        <attr name="pivPasswordColor" format="color" />
+        <attr name="pivPasswordWidth" format="dimension" />
+        <attr name="pivPasswordRadius" format="dimension" />
+        <attr name="pivPasswordLength" format="integer" />
+    </declare-styleable>
+
+
+
+
+    <!--支付密码输入控件-->
+    <declare-styleable name="PayPsdInputView">
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color" />
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+
+
+
+    <!--圆型图片-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <!--画线控件-->
+    <declare-styleable name="PercentLineView">
+        <attr name="line_color" format="color" />
+        <attr name="line_height" format="dimension" />
+    </declare-styleable>
+
+    <!--圆型控件-->
+    <declare-styleable name="CircleView">
+        <attr name="circle_color" format="color" />
+    </declare-styleable>
+
+    <!--曲线图控件-->
+    <declare-styleable name="BrokenLineStatisticsTableView">
+        <attr name="broken_line_color" format="color" />
+        <attr name="text_color" format="color" />
+        <attr name="text_size" format="dimension" />
+        <attr name="circle_point_color" format="color" />
+    </declare-styleable>
+
+
+
+    <!--右滑动退出-->
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension"/>
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference"/>
+        <attr name="shadow_right" format="reference"/>
+        <attr name="shadow_bottom" format="reference"/>
+    </declare-styleable>
+
+    <attr name="SwipeBackLayoutStyle" format="reference"/>
+
+
+</resources>
