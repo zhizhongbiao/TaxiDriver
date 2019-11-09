@@ -15,7 +15,6 @@ import com.taxidriver.santos.app.MyApp;
 import com.taxidriver.santos.utils.log.LogUtils;
 
 import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
 /**
  * Author : WaterFlower.
@@ -23,9 +22,8 @@ import butterknife.Unbinder;
  * Desc :
  */
 
-public abstract class BaseActivity  extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
-    private Unbinder mUnbinder;
     private MyApp application;
     protected Handler mainThreadHandler;
 
@@ -41,17 +39,17 @@ public abstract class BaseActivity  extends AppCompatActivity {
         initHandler();
         super.onCreate(savedInstanceState);
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            // 透明状态栏
-            //            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            //             透明导航栏
-            //            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        // 透明状态栏
+        //            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //             透明导航栏
+        //            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 //        }
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
 //        getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.background));
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
         setContentView(getViewLayout());
-        mUnbinder = ButterKnife.bind(this);
+        ButterKnife.bind(this);
         initView(savedInstanceState, getIntent());
     }
 
@@ -70,7 +68,6 @@ public abstract class BaseActivity  extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         application.removeActivity(this);
-        mUnbinder.unbind();
         super.onDestroy();
 
         RefWatcher memoryWatcher = MyApp.getMemoryWatcher(this);
@@ -98,7 +95,7 @@ public abstract class BaseActivity  extends AppCompatActivity {
 
     public String getMyTag() {
         String name = this.getClass().getName();
-        LogUtils.e("getMyTag   name="+name);
+        LogUtils.e("getMyTag   name=" + name);
         return name;
     }
 
